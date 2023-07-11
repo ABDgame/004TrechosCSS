@@ -9,7 +9,14 @@
 body
 {
   min-height: 100vh;
-  background:#fff;
+  background-image: url("0116-temperodasoso.jpg"); 
+  background-repeat: no-repeat;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
 }
 header
 {
