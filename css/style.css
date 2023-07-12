@@ -23,7 +23,7 @@ header
   position: absolute;
   width: 100%;
   min-height: 66px;
-  background:#e5dbd0
+  background:#fff;
   padding: 0 100px;
   display: flex;
   justify-content: space-between;
