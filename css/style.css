@@ -1,86 +1,134 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-*
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family:'Poppins', sans-serif;
-}
-body
-{
-  min-height: 100vh;
-  background-image: url("0116-temperodasoso.jpg"); 
-  background-repeat: no-repeat;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-   background-size: cover;
-   background-position: center;
-   background-attachment: fixed;
-}
-header
-{
-  position: absolute;
-  width: 100%;
-  min-height: 66px;
-  background:#fff;
-  padding: 0 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header .logo
-{
-  color:#000;
-  font-size: 1.7em;
-  font-weight: 600;
-  text-decoration: none;
-}
-header ul
-{
-  position: relative;
-}
-header ul li 
-{
-  position: relative;
-  list-style: none;
-  float: left;
-}
-header ul li a
-{
-  color:#000;
-  font-size: 1.1em;
-  padding: 20px 25px;
-  text-decoration:none;
-  display:flex;
-  justify-content: space-between;
-}
-header ul li a:hover
-{
-  background:#ab7a58;
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
 }
 
-header ul li ul
-{
-  position: absolute;
-  left: 0;
-  width: 200px;
-  background:#fff;
-  display:none;
-}
-header ul li:hover > ul
-{
-  display:block;
-}
-header ul li ul li
-{
-  position: relative;
-  width:100%;
-  border:1px solid rgba(0,0,0,0.2);
-}
-header ul li ul li ul
-{
-  top:0;
-  left:200px;
+body{
+    min-height: 100vh;
+    background:url(../images/0021-DocePaladar.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
+header{
+    position: fixed;
+    top:0; left:0; right:0; 
+    background:#fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding:0px 7%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: #321913;
+}
+header .navbar ul{
+    list-style: none;
+}
+
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: #321913;
+    display: block;
+}
+header .navbar ul li a:hover{
+    background: #321913;
+    color:#fff;
+}
+header .navbar ul li ul{
+    position: absolute;
+    left:0;
+    width:200px;
+    background: #fff; 
+    display:none;
+}
+header .navbar ul li ul li{
+    width:100%;
+    border-top:1px solid rgba(0,0,0,.1);
+}
+header .navbar ul li ul li ul{
+    left:200px;
+    top:0;
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+#menu-bar{
+    display:none;
+}
+header label{
+    font-size: 20px;
+    color:#321913;
+    cursor:pointer;
+    display:none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+
+    header{
+        padding:20px;
+
+    }
+    header label{
+        display: initial;
+
+    }
+    header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background:#fff;  
+        border-top: 1px solid rgba(0,0,0,.1);
+        display:none;
+    }
+    header .navbar ul li{
+        width: 100%;    
+    }
+    header .navbar ul li ul{
+        position: relative;
+        width:100%;    
+    }
+    header .navbar ul li ul li{
+        background:#eee;    
+    }
+    header .navbar ul li ul li ul{
+        width:100%;
+        left:0;
+    }
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+
+    }
+}
